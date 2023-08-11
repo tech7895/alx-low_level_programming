@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 /**
- * main - This program prints task 'Positive anything is better than negative nothing'
+ * main - This program prints task 'Positive anything is better than..'
  *
  * Return: Always 0
-*/
+ */
 int main(void)
 {
 	int n;
