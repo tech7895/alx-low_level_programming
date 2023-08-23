@@ -6,6 +6,7 @@
  * Return: The encoded string
  *
  */
+
 char *rot13(char *s)
 {
 	int i = 0;
