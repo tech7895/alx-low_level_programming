@@ -30,11 +30,11 @@ void rev_string(char *n)
 
 /**
  * infinite_add - This function adds 2 numbers together
- * @n1: 1st number to add
- * @n2: 2nd number to add
+ * @n1: 1st number
+ * @n2: 2nd number
  * @r: pointer
  * @size_r: buffer size
- * Return: pointer to calling function
+ * Return: The pointer
  *
  */
 
