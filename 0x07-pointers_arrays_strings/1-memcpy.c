@@ -5,14 +5,14 @@
  * @src: source
  * @n: the n bytes
  *
- * Return: dest,
+ * Return: dest
  *
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int a = 0;
+	unsigned int a;
 
-	for (; a < n; a++)
+	for (a = 0; 0 < n; a++)
 	{
 		dest[a] = src[a];
 		n--;
