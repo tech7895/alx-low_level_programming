@@ -4,7 +4,7 @@
  * @s: the string
  * @c: the character
  *
- * Return: c or 0,
+ * Return: s or 0,
  *
  */
 char *_strchr(char *s, char c)
@@ -15,7 +15,7 @@ char *_strchr(char *s, char c)
 	{
 		if (s[a] == c)
 		{
-			return (&s[a]);
+			return (s);
 		}
 
 	}
