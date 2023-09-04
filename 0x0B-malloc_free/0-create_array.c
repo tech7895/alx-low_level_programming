@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * *create_array - This function creates an array of chars, and
@@ -12,7 +14,7 @@
 
 char *create_array(unsigned int size, char c)
 {
-	unsigned it a;
+	unsigned int a;
 	char *p;
 
 	if (size == 0)
@@ -25,9 +27,12 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	for (a = 1; a = size; a++)
+	for (a = 0; ; a++)
 	{
-		p[a] = c;
+		if (a < size)
+		{
+			p[a] = c;
+		}
 	}
 
 	return (p);
