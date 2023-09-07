@@ -7,41 +7,46 @@
  * @s2: string two
  * @n: number of bytes
  *
- * Return: p
+ * Return: str
  *
  */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *ptr;
-	unsigned int s1count, s2count, sizeBuffer, i;
+	size_t a, b, c;
+	char *str;
 
 	if (s1 == NULL)
 	{
-		s1 = "";
+		a = 0;
 	}
+	else
+	{
+		for (a = 0; s1[a] != '\0'; a++)
+			;
+	}
+
 	if (s2 == NULL)
 	{
-		s2 = "";
+		b = 0;
 	}
-	for (s1count = 0; s1[s1count]; s1count++)
+	else
 	{
+		for (b = 0; s2[b] != '\0'; b++)
+			;
 	}
-	for (s2count = 0; s2[s2count]; s2count++)
+	if (b > n)
 	{
-
+		b = n;
 	}
-	s2count > n ? (s2count = n) : (n = s2count);
-	sizeBuffer = s1count + s2count + 1;
-	ptr = malloc(sizeBuffer * sizeof(char));
-	if (ptr == NULL)
-	{
+	str = malloc(sizeof(char) * (a + b + 1));
+	if (str == NULL)
 		return (NULL);
-	}
-	for (i = 0; i < sizeBuffer - 1; i++)
-	{
-		i < s1count ? (ptr[i] = s1[i]) : (ptr[i] = s2[i - s1count]);
-		ptr[sizeBuffer] = '\0';
-	}
+	for (c = 0; c < a; c++)
+		str[c] = s1[c];
+	for (c = 0; c < b; c++)
+		str[c + a] = s2[c];
+	str[a + b] = '\0';
 
-	return (ptr);
+	return (str);
 }
