@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	for (j = 0; index < i; index++)
+	for (j = 0; j < i; j++)
 	{
 		opcode = *(unsigned char *)address;
 		printf("%.2x", opcode);
