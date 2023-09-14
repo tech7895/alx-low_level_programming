@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 
 /**
- * print_s - This fuction prints strings, followed by a new line
+ * print_strings - This fuction prints strings, followed by a new line
  * @separator: the string
  * @n: the number of s
  * @...: the variable of s
@@ -11,25 +11,29 @@
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	char *str;
-	va_list s;
 	unsigned int a;
+	char *s;
 
-	va_start(s, n);
+	va_list ptr_str;
+
+	va_start(ptr_str, n);
 
 	for (a = 0; a < n; a++)
 	{
-		str = va_arg(s, char *);
+		s = va_arg(ptr_str, char *);
 
-		if (str == NULL)
+		if (s == NULL)
+		{
 			printf("(nil)");
+		}
 		else
-			printf("%s", str);
-
+		{
+			printf("%s", s);
+		}
 		if (a != (n - 1) && separator != NULL)
 			printf("%s", separator);
 	}
-
 	printf("\n");
-	va_end(s);
+
+	va_end(ptr_str);
 }
