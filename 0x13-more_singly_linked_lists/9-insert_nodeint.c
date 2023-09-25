@@ -55,14 +55,14 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = new_node;
 	}
 	for (i = 0; i < idx - 1 && t != NULL && idx != 0; i++)
-		t = tmp->next;
+		t = t->next;
 	if (t == NULL)
 		return (NULL);
 	if (idx == 0)
 		new_node->next = t;
 	else
 	{
-		t_old = tmp->next;
+		t_old = t->next;
 		t->next = new_node;
 		new_node->next = t_old;
 	}
