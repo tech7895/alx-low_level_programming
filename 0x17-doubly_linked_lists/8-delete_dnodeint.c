@@ -44,7 +44,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			return (1);
 		}
 		hd2 = hd1;
-		hd1 = h1->next;
+		hd1 = hd1->next;
 		i++;
 	}
 	return (-1);
