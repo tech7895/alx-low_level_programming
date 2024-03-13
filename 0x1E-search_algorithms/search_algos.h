@@ -6,10 +6,10 @@
 #include <stdlib.h>
 
 /**
- *
- * @n: Integer
- * @index: Index of the node in the list
- * @next: Pointer to the next node
+ * struct listint_s - A singly linked list with an express lane
+ * @n: The integer
+ * @index: the index of the node in the list
+ * @next: a pointer to the next node
  *
  * Description: singly linked list node structure
  */
@@ -21,15 +21,17 @@ typedef struct listint_s
 } listint_t;
 
 /**
- * struct skiplist_s - Singly linked list with an express lane
+ * struct skiplist_s - A singly linked list with an express lane
  *
  * @n: Integer
- * @index: Index of the node in the list
+ * @index: The index of the node in the list
  * @next: Pointer to the next node
  * @express: Pointer to the next node in the express lane
  *
- * Description: singly linked list node structure with an express lane
+ * Description: singly linked list node structure
+ * with an express lane
  */
+
 typedef struct skiplist_s
 {
 				int n;
@@ -48,4 +50,4 @@ listint_t *jump_list(listint_t *list, size_t size, int value);
 skiplist_t *linear_skip(skiplist_t *list, int value);
 
 
-#endif /* SEARCH_ALGO_H */
+#endif
