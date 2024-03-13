@@ -1,9 +1,9 @@
 #include "search_algos.h"
 
 /**
- * binary_search - function that searches for array value in array sorted array
+ * binary_search - This function searches for array value in array sorted array
  * of integers using Binary search algorithm.
- * @array: pointer to the first element of the array to search in.
+ * @array: the the pointer to the first element of the array to search in.
  * @size: number of elements in array.
  * @value: value to search for.
  *
@@ -19,7 +19,7 @@ int binary_search(int *array, size_t size, int value)
 
 /**
  * binary_search_index - recursive function for helping binary_search.
- * @array: pointer to the first element of the array to search in.
+ * @array: the the pointer to the first element of the array to search in.
  * @l: left index of array.
  * @r: right index of array.
  * @value: value to look for.
@@ -31,34 +31,34 @@ int binary_search(int *array, size_t size, int value)
  */
 int binary_search_index(int *array, size_t l, size_t r, int value)
 {
-	int mid;
+	int md;
 
 	/* if l is ever > r, it means the element is not in the array */
 	if (!array || l > r)
 		return (-1);
 	print_array(array, l, r);
 
-	/* find the mid-way index between index l and index r */
-	mid = l + (r - l) / 2;
+	/* find the md-way index between index l and index r */
+	md = l + (r - l) / 2;
 
 	if (l == r)
-		return (*(array + mid) == value ? (int)mid : -1);
+		return (*(array + md) == value ? (int)md : -1);
 
-	/* if we've found the element at the mid-way index, return the index */
-	if (array[mid] == value)
-		return (mid);
+	/* if we've found the element at the md-way index, return the index */
+	if (array[md] == value)
+		return (md);
 	/**
 	 * else if the element MUST be in the left-portion of the portion of the
 	 * array we are currently looking at, search for it in this portion
 	 */
-	else if (array[mid] > value)
-		return (binary_search_index(array, l, mid - 1, value));
+	else if (array[md] > value)
+		return (binary_search_index(array, l, md - 1, value));
 	/**
 	 * else if the element MUST be in the right-portion of the portion of the
 	 * array we are currently looking at, search for it in this portion
 	 */
 	else
-		return (binary_search_index(array, mid + 1, r, value));
+		return (binary_search_index(array, md + 1, r, value));
 }
 
 /**

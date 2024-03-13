@@ -3,8 +3,8 @@
 /**
   * advanced_binary_recursive - Searches recursively for a value in a sorted
   *                             array of integers using binary search.
-  * @array: A pointer to the first element of the [sub]array to search.
-  * @left: The starting index of the [sub]array to search.
+  * @array: A the the pointer to the first element of the [sub]array to search.
+  * @left: Starting index of the [sub]array to search.
   * @right: The ending index of the [sub]array to search.
   * @value: The value to search for.
   *
@@ -34,9 +34,9 @@ int advanced_binary_recursive(int *array, size_t left, size_t right, int value)
 }
 
 /**
-  * advanced_binary - Searches for a value in a sorted array
+  * advanced_binary - This function searches a value in a sorted array
   *                   of integers using advanced binary search.
-  * @array: A pointer to the first element of the array to search.
+  * @array: A the the pointer to the first element of the array to search.
   * @size: The number of elements in the array.
   * @value: The value to search for.
   *
